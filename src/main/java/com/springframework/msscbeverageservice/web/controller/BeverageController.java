@@ -17,20 +17,20 @@ public class BeverageController {
         return new ResponseEntity<>(BeverageDto.builder().build(), HttpStatus.OK);
     }
 
-    @PostMapping()
+    @PostMapping("/")
     public ResponseEntity saveNewBeverage(@RequestBody BeverageDto beverageDto) {
         // TODO Impl
         return new ResponseEntity<>(BeverageDto.builder().build(), HttpStatus.CREATED);
     }
 
     @PutMapping("/{beverageId}")
-    public ResponseEntity updateBeverage(@PathVariable("beverageId") UUID beverageId, @RequestBody BeverageDto beverageDto) {
+    public ResponseEntity updateBeverageById(@PathVariable("beverageId") UUID beverageId, @RequestBody BeverageDto beverageDto) {
         // TODO Impl
         return new ResponseEntity<>(BeverageDto.builder().build(), HttpStatus.NO_CONTENT);
     }
 
     @DeleteMapping("/{beverageId}")
-    public ResponseEntity deleteBeverage(@PathVariable("beverageId") UUID beverageId) {
+    public ResponseEntity deleteBeverageById(@PathVariable("beverageId") UUID beverageId) {
         // TODO Impl
         return new ResponseEntity<>(BeverageDto.builder().build(), HttpStatus.NO_CONTENT);
     }
